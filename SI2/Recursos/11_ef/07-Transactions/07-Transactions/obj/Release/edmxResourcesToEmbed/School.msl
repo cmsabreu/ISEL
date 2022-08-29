@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EF_DEMOModelStoreContainer" CdmEntityContainer="school">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="EF_DEMOModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="countryId" ColumnName="countryId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="EF_DEMOModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="courseId" ColumnName="courseId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="EF_DEMOModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="studentId" ColumnName="studentId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dateBirth" ColumnName="dateBirth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="StudentCourse" TypeName="EF_DEMOModel.StudentCourse" StoreEntitySet="StudentCourse">
+      <EndProperty Name="Course">
+        <ScalarProperty Name="courseId" ColumnName="courseId" />
+      </EndProperty>
+      <EndProperty Name="Student">
+        <ScalarProperty Name="studentId" ColumnName="studentId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

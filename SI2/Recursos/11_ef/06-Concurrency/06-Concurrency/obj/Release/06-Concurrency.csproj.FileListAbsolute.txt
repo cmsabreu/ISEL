@@ -1,0 +1,1 @@
+\\Vboxsvr\2014-2015-1\Exemplos\ef\06-Concurrency\06-Concurrency\bin\Release\06 - Concurrency.exe.config

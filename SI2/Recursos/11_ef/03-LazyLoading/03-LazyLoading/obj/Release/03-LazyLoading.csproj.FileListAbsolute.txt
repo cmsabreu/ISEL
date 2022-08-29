@@ -1,0 +1,11 @@
+\\Vboxsvr\2014-2015-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\03-LazyLoading.exe.config
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\03-LazyLoading.exe.config
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\03-LazyLoading.exe
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\03-LazyLoading.pdb
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\EntityFramework.dll
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\EntityFramework.SqlServer.dll
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\EntityFramework.xml
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\bin\Release\EntityFramework.SqlServer.xml
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\obj\Release\03-LazyLoading.csprojResolveAssemblyReference.cache
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\obj\Release\03-LazyLoading.exe
+\\Vboxsvr\2015-2016-1\Exemplos\ef\03-LazyLoading\03-LazyLoading\obj\Release\03-LazyLoading.pdb

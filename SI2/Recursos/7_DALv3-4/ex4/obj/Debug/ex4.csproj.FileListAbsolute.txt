@@ -1,0 +1,13 @@
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/bin/Debug/ex1.exe.config
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/obj/Debug/ex1.exe
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/obj/Debug/ex1.pdb
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/bin/Debug/ex1.exe
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/bin/Debug/ex1.pdb
+//VBOXSVR/si2/2017-2018-1/exemplos/dal/ex4/obj/Debug/ex4.csprojResolveAssemblyReference.cache
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/bin/Debug/ex1.exe.config
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/bin/Debug/ex1.exe
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/bin/Debug/ex1.pdb
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/obj/Debug/ex4.csprojAssemblyReference.cache
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/obj/Debug/ex4.csproj.CoreCompileInputs.cache
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/obj/Debug/ex1.exe
+/Users/datia/Data/Clouds/PersonalDrive/Isel/Aulas/SI2/2020-2021-1/exemplos/dal/ex4/obj/Debug/ex1.pdb

@@ -1,0 +1,11 @@
+\\Vboxsvr\2014-2015-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\02-trackChanges.exe.config
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\02-trackChanges.exe.config
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\02-trackChanges.exe
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\02-trackChanges.pdb
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\EntityFramework.dll
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\EntityFramework.SqlServer.dll
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\EntityFramework.xml
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\bin\Release\EntityFramework.SqlServer.xml
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\obj\Release\02-trackChanges.csprojResolveAssemblyReference.cache
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\obj\Release\02-trackChanges.exe
+\\Vboxsvr\2015-2016-1\Exemplos\ef\02-TrackChanges\02-trackChanges\obj\Release\02-trackChanges.pdb

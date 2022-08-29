@@ -1,0 +1,6 @@
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\bin\Debug\ex1.exe.config
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\obj\Debug\ex1.exe
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\obj\Debug\ex1.pdb
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\bin\Debug\ex1.exe
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\bin\Debug\ex1.pdb
+\\Vboxsvr\si2\2017-2018-1\exemplos\dal\ex3\obj\Debug\ex3.csprojResolveAssemblyReference.cache

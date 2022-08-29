@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.kotlin.jvm" version "1.6.10"
+}
+
+group 'org.pedrofelix.pc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation 'org.eclipse.jetty:jetty-servlet:9.4.31.v20200723'
+    runtime 'org.slf4j:slf4j-simple:1.7.30'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+
+    testImplementation 'junit:junit:4.12'
+}

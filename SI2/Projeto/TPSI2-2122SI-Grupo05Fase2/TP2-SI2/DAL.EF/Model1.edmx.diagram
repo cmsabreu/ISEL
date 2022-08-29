@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38f11292bb64491b867b0e12f30cdb15" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="L51DG5Model.ASSET" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="L51DG5Model.EMPLOYEE" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="L51DG5Model.INTERVENTION" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="L51DG5Model.MAINTENANCE_TEAM" Width="1.5" PointX="1.5" PointY="9.75" />
+        <EntityTypeShape EntityType="L51DG5Model.NON_PERIODIC" Width="1.5" PointX="7.5" PointY="8.5" />
+        <EntityTypeShape EntityType="L51DG5Model.PERIODIC" Width="1.5" PointX="7.5" PointY="3.5" />
+        <EntityTypeShape EntityType="L51DG5Model.REGISTER" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="L51DG5Model.SCHEDULING" Width="1.5" PointX="10.5" PointY="4.375" />
+        <EntityTypeShape EntityType="L51DG5Model.SKILL" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="L51DG5Model.TYPE" Width="1.5" PointX="0.75" PointY="5.75" />
+        <AssociationConnector Association="L51DG5Model.FK__ASSET__asset_ref__4C8B54C9" />
+        <AssociationConnector Association="L51DG5Model.FK__ASSET__manager__4D7F7902" />
+        <AssociationConnector Association="L51DG5Model.FK__ASSET__type__4E739D3B" />
+        <AssociationConnector Association="L51DG5Model.FK__INTERVENT__asset__5DB5E0CB" />
+        <AssociationConnector Association="L51DG5Model.FK__REGISTER__asset___515009E6" />
+        <AssociationConnector Association="L51DG5Model.FK__MAINTENAN__super__55209ACA" />
+        <AssociationConnector Association="L51DG5Model.FK__NON_PERIODIC__id__6462DE5A" />
+        <AssociationConnector Association="L51DG5Model.FK__PERIODIC__id__618671AF" />
+        <AssociationConnector Association="L51DG5Model.FK__SCHEDULIN__inter__68336F3E" />
+        <AssociationConnector Association="L51DG5Model.FK__SCHEDULIN__team___673F4B05" />
+        <AssociationConnector Association="L51DG5Model.EMPLOYEE_SKILL" />
+        <AssociationConnector Association="L51DG5Model.TEAM_MEMBER" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe.config
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe.config
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe.config
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csproj.CopyComplete
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe.config
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\07 - Transactions.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07-Transactions.csproj.CopyComplete
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\07-Transactions\07-Transactions\obj\Debug\07 - Transactions.pdb

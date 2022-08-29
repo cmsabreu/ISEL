@@ -1,0 +1,5 @@
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DALTypes\bin\Debug\DALTypes.dll
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DALTypes\bin\Debug\DALTypes.pdb
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DALTypes\obj\Debug\DALTypes.csproj.CoreCompileInputs.cache
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DALTypes\obj\Debug\DALTypes.dll
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DALTypes\obj\Debug\DALTypes.pdb

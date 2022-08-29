@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{69480F24-1CB3-43EE-BDEB-D231482967FB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TP2SI2</RootNamespace>
+    <AssemblyName>TP2-SI2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs" />
+    <Compile Include="concrete\TeamMemberMapper.cs" />
+    <Compile Include="dal\IContext.cs" />
+    <Compile Include="mapper\AbstractMapper.cs" />
+    <Compile Include="mapper\IAssetMapper.cs" />
+    <Compile Include="mapper\IEmployeeMapper.cs" />
+    <Compile Include="mapper\IInterventionMapper.cs" />
+    <Compile Include="mapper\IMaintenanceTeamMapper.cs" />
+    <Compile Include="mapper\IMapper.cs" />
+    <Compile Include="mapper\ISchedulingMapper.cs" />
+    <Compile Include="mapper\ISkillMapper.cs" />
+    <Compile Include="mapper\ITeamMemberMapper.cs" />
+    <Compile Include="mapper\ITypeMapper.cs" />
+    <Compile Include="mapper\MaintenanceTeamProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\Periodic.cs" />
+    <Compile Include="model\Register.cs" />
+    <Compile Include="model\Scheduling.cs" />
+    <Compile Include="model\Skill.cs" />
+    <Compile Include="model\TeamMember.cs" />
+    <Compile Include="model\Type.cs" />
+    <Compile Include="model\Asset.cs" />
+    <Compile Include="model\Employee.cs" />
+    <Compile Include="model\EmployeeSkill.cs" />
+    <Compile Include="model\Intervention.cs" />
+    <Compile Include="model\MaintenanceTeam.cs" />
+    <Compile Include="model\NonPeriodic.cs" />
+    <Compile Include="concrete\AssetMapper.cs" />
+    <Compile Include="concrete\AssetProxy.cs" />
+    <Compile Include="concrete\Context.cs" />
+    <Compile Include="concrete\EmployeeMapper.cs" />
+    <Compile Include="concrete\InterventionMapper.cs" />
+    <Compile Include="concrete\InterventionProxy.cs" />
+    <Compile Include="concrete\MaintenanceTeamMapper.cs" />
+    <Compile Include="concrete\MaintenanceTeamProxy.cs" />
+    <Compile Include="concrete\SchedulingMapper.cs" />
+    <Compile Include="concrete\SchedulingProxy.cs" />
+    <Compile Include="concrete\SkillMapper.cs" />
+    <Compile Include="concrete\TypeMapper.cs" />
+    <Compile Include="Services.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.EF\DAL.EF.csproj">
+      <Project>{6D61C793-F0D9-45B1-9BE7-64672293DD1C}</Project>
+      <Name>DAL.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

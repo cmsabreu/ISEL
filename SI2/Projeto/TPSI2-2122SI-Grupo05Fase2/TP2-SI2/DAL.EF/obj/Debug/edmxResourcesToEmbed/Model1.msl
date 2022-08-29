@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="L51DG5ModelStoreContainer" CdmEntityContainer="L51DG5Entities">
+    <FunctionImportMapping FunctionName="L51DG5Model.Store.interByYear" FunctionImportName="interByYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="L51DG5Model.interByYear_Result">
+          <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="insertEmployee" FunctionName="L51DG5Model.Store.insertEmployee" />
+    <FunctionImportMapping FunctionImportName="p_create_team" FunctionName="L51DG5Model.Store.p_create_team" />
+    <FunctionImportMapping FunctionImportName="p_criaInter" FunctionName="L51DG5Model.Store.p_criaInter" />
+    <FunctionImportMapping FunctionImportName="removeEmployee" FunctionName="L51DG5Model.Store.removeEmployee" />
+    <FunctionImportMapping FunctionImportName="update_interventation_state" FunctionName="L51DG5Model.Store.update_interventation_state" />
+    <FunctionImportMapping FunctionImportName="update_team_members" FunctionName="L51DG5Model.Store.update_team_members" />
+    <FunctionImportMapping FunctionImportName="updateEmployee" FunctionName="L51DG5Model.Store.updateEmployee" />
+    <FunctionImportMapping FunctionImportName="updateStateIntervention" FunctionName="L51DG5Model.Store.updateStateIntervention" />
+    <EntitySetMapping Name="ASSETs">
+      <EntityTypeMapping TypeName="L51DG5Model.ASSET">
+        <MappingFragment StoreEntitySet="ASSET">
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="asset_reference" ColumnName="asset_reference" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="acquisition_date" ColumnName="acquisition_date" />
+          <ScalarProperty Name="asset_name" ColumnName="asset_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEEs">
+      <EntityTypeMapping TypeName="L51DG5Model.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEE">
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="l_name" ColumnName="l_name" />
+          <ScalarProperty Name="f_name" ColumnName="f_name" />
+          <ScalarProperty Name="ssn" ColumnName="ssn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTERVENTIONs">
+      <EntityTypeMapping TypeName="L51DG5Model.INTERVENTION">
+        <MappingFragment StoreEntitySet="INTERVENTION">
+          <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAINTENANCE_TEAM">
+      <EntityTypeMapping TypeName="L51DG5Model.MAINTENANCE_TEAM">
+        <MappingFragment StoreEntitySet="MAINTENANCE_TEAM">
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+          <ScalarProperty Name="n_elements" ColumnName="n_elements" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="team_code" ColumnName="team_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NON_PERIODIC">
+      <EntityTypeMapping TypeName="L51DG5Model.NON_PERIODIC">
+        <MappingFragment StoreEntitySet="NON_PERIODIC">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERIODICs">
+      <EntityTypeMapping TypeName="L51DG5Model.PERIODIC">
+        <MappingFragment StoreEntitySet="PERIODIC">
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTERs">
+      <EntityTypeMapping TypeName="L51DG5Model.REGISTER">
+        <MappingFragment StoreEntitySet="REGISTER">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="alteration_date" ColumnName="alteration_date" />
+          <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCHEDULINGs">
+      <EntityTypeMapping TypeName="L51DG5Model.SCHEDULING">
+        <MappingFragment StoreEntitySet="SCHEDULING">
+          <ScalarProperty Name="scheduling_date" ColumnName="scheduling_date" />
+          <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+          <ScalarProperty Name="team_code" ColumnName="team_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKILLs">
+      <EntityTypeMapping TypeName="L51DG5Model.SKILL">
+        <MappingFragment StoreEntitySet="SKILL">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPEs">
+      <EntityTypeMapping TypeName="L51DG5Model.TYPE">
+        <MappingFragment StoreEntitySet="TYPE">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EMPLOYEE_SKILL" TypeName="L51DG5Model.EMPLOYEE_SKILL" StoreEntitySet="EMPLOYEE_SKILL">
+      <EndProperty Name="SKILL">
+        <ScalarProperty Name="id" ColumnName="skill_code" />
+      </EndProperty>
+      <EndProperty Name="EMPLOYEE">
+        <ScalarProperty Name="ssn" ColumnName="employee_code" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TEAM_MEMBER" TypeName="L51DG5Model.TEAM_MEMBER" StoreEntitySet="TEAM_MEMBER">
+      <EndProperty Name="EMPLOYEE">
+        <ScalarProperty Name="ssn" ColumnName="id" />
+      </EndProperty>
+      <EndProperty Name="MAINTENANCE_TEAM">
+        <ScalarProperty Name="team_code" ColumnName="team_code" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="get_code_from_team" FunctionName="L51DG5Model.Store.get_code_from_team">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="L51DG5Model.get_code_from_team_Result">
+          <ScalarProperty Name="team_code" ColumnName="team_code" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="n_elements" ColumnName="n_elements" />
+          <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

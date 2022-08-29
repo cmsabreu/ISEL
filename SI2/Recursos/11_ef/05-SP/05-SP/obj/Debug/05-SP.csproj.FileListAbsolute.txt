@@ -1,0 +1,9 @@
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\05-SP\05-SP\bin\Debug\05 - SP.exe.config
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\bin\Debug\05 - SP.exe.config
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\bin\Debug\05 - SP.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\bin\Debug\05 - SP.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\obj\Debug\05-SP.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\obj\Debug\05 - SP.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\05-SP\05-SP\obj\Debug\05 - SP.pdb

@@ -1,0 +1,36 @@
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe.config
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe.config
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe.config
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csproj.CopyComplete
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe.config
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\06 - Concurrency.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06-Concurrency.csproj.CopyComplete
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\06-Concurrency\06-Concurrency\obj\Debug\06 - Concurrency.pdb

@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="L51DG5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ASSET">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="asset_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="acquisition_date" Type="datetime" Nullable="false" />
+          <Property Name="state" Type="bit" Nullable="false" />
+          <Property Name="brand" Type="varchar" MaxLength="30" />
+          <Property Name="model" Type="varchar" MaxLength="30" />
+          <Property Name="location" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="asset_reference" Type="int" />
+          <Property Name="manager" Type="int" />
+          <Property Name="type" Type="int" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ssn" />
+          </Key>
+          <Property Name="ssn" Type="int" Nullable="false" />
+          <Property Name="f_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="l_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="birth_date" Type="datetime" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="postal_code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="job" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="int" Nullable="false" />
+          <Property Name="mail" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE_SKILL">
+          <Key>
+            <PropertyRef Name="employee_code" />
+            <PropertyRef Name="skill_code" />
+          </Key>
+          <Property Name="employee_code" Type="int" Nullable="false" />
+          <Property Name="skill_code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INTERVENTION">
+          <Key>
+            <PropertyRef Name="intervention_code" />
+          </Key>
+          <Property Name="intervention_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="50" />
+          <Property Name="state" Type="varchar" MaxLength="50" />
+          <Property Name="price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="start_date" Type="datetime" Nullable="false" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="asset_id" Type="int" />
+        </EntityType>
+        <EntityType Name="MAINTENANCE_TEAM">
+          <Key>
+            <PropertyRef Name="team_code" />
+          </Key>
+          <Property Name="team_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="n_elements" Type="int" Nullable="false" />
+          <Property Name="supervisor" Type="int" />
+        </EntityType>
+        <EntityType Name="NON_PERIODIC">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERIODIC">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="frequency" Type="int" />
+        </EntityType>
+        <EntityType Name="REGISTER">
+          <Key>
+            <PropertyRef Name="asset_id" />
+            <PropertyRef Name="alteration_date" />
+          </Key>
+          <Property Name="asset_id" Type="int" Nullable="false" />
+          <Property Name="alteration_date" Type="datetime" Nullable="false" />
+          <Property Name="price" Type="decimal" Precision="6" Scale="2" />
+        </EntityType>
+        <EntityType Name="SCHEDULING">
+          <Key>
+            <PropertyRef Name="team_code" />
+            <PropertyRef Name="intervention_code" />
+          </Key>
+          <Property Name="team_code" Type="int" Nullable="false" />
+          <Property Name="intervention_code" Type="int" Nullable="false" />
+          <Property Name="scheduling_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SKILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TEAM_MEMBER">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="team_code" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="team_code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <Association Name="FK__ASSET__asset_ref__4C8B54C9">
+          <End Role="ASSET" Type="Self.ASSET" Multiplicity="0..1" />
+          <End Role="ASSET1" Type="Self.ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ASSET1">
+              <PropertyRef Name="asset_reference" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ASSET__manager__4D7F7902">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+          <End Role="ASSET" Type="Self.ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="ASSET">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ASSET__type__4E739D3B">
+          <End Role="TYPE" Type="Self.TYPE" Multiplicity="0..1" />
+          <End Role="ASSET" Type="Self.ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ASSET">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEE___emplo__6CF8245B">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
+          <End Role="EMPLOYEE_SKILL" Type="Self.EMPLOYEE_SKILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="EMPLOYEE_SKILL">
+              <PropertyRef Name="employee_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EMPLOYEE___skill__6DEC4894">
+          <End Role="SKILL" Type="Self.SKILL" Multiplicity="1" />
+          <End Role="EMPLOYEE_SKILL" Type="Self.EMPLOYEE_SKILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SKILL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EMPLOYEE_SKILL">
+              <PropertyRef Name="skill_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INTERVENT__asset__5DB5E0CB">
+          <End Role="ASSET" Type="Self.ASSET" Multiplicity="0..1" />
+          <End Role="INTERVENTION" Type="Self.INTERVENTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="INTERVENTION">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MAINTENAN__super__55209ACA">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="0..1" />
+          <End Role="MAINTENANCE_TEAM" Type="Self.MAINTENANCE_TEAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="MAINTENANCE_TEAM">
+              <PropertyRef Name="supervisor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NON_PERIODIC__id__6462DE5A">
+          <End Role="INTERVENTION" Type="Self.INTERVENTION" Multiplicity="1" />
+          <End Role="NON_PERIODIC" Type="Self.NON_PERIODIC" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="NON_PERIODIC">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PERIODIC__id__618671AF">
+          <End Role="INTERVENTION" Type="Self.INTERVENTION" Multiplicity="1" />
+          <End Role="PERIODIC" Type="Self.PERIODIC" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="PERIODIC">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__asset___515009E6">
+          <End Role="ASSET" Type="Self.ASSET" Multiplicity="1" />
+          <End Role="REGISTER" Type="Self.REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SCHEDULIN__inter__68336F3E">
+          <End Role="INTERVENTION" Type="Self.INTERVENTION" Multiplicity="1" />
+          <End Role="SCHEDULING" Type="Self.SCHEDULING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="SCHEDULING">
+              <PropertyRef Name="intervention_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SCHEDULIN__team___673F4B05">
+          <End Role="MAINTENANCE_TEAM" Type="Self.MAINTENANCE_TEAM" Multiplicity="1" />
+          <End Role="SCHEDULING" Type="Self.SCHEDULING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINTENANCE_TEAM">
+              <PropertyRef Name="team_code" />
+            </Principal>
+            <Dependent Role="SCHEDULING">
+              <PropertyRef Name="team_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEAM_MEMB__team___58F12BAE">
+          <End Role="MAINTENANCE_TEAM" Type="Self.MAINTENANCE_TEAM" Multiplicity="1" />
+          <End Role="TEAM_MEMBER" Type="Self.TEAM_MEMBER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINTENANCE_TEAM">
+              <PropertyRef Name="team_code" />
+            </Principal>
+            <Dependent Role="TEAM_MEMBER">
+              <PropertyRef Name="team_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEAM_MEMBER__id__57FD0775">
+          <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
+          <End Role="TEAM_MEMBER" Type="Self.TEAM_MEMBER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="TEAM_MEMBER">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="get_code_from_team" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="team_code" Type="int" />
+                <Property Name="location" Type="varchar" MaxLength="50" />
+                <Property Name="n_elements" Type="int" />
+                <Property Name="supervisor" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="insertEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ssn" Type="int" Mode="In" />
+          <Parameter Name="f_name" Type="varchar" Mode="In" />
+          <Parameter Name="l_name" Type="varchar" Mode="In" />
+          <Parameter Name="birth_date" Type="datetime" Mode="In" />
+          <Parameter Name="address" Type="varchar" Mode="In" />
+          <Parameter Name="postal_code" Type="varchar" Mode="In" />
+          <Parameter Name="city" Type="varchar" Mode="In" />
+          <Parameter Name="job" Type="varchar" Mode="In" />
+          <Parameter Name="phone_number" Type="int" Mode="In" />
+          <Parameter Name="mail" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="interByYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="intervention_code" Type="int" />
+                <Property Name="description" Type="varchar" MaxLength="50" />
+                <Property Name="state" Type="varchar" MaxLength="50" />
+                <Property Name="price" Type="decimal" Precision="10" Scale="2" />
+                <Property Name="start_date" Type="datetime" />
+                <Property Name="end_date" Type="datetime" />
+                <Property Name="asset_id" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="p_create_team" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="location" Type="varchar" Mode="In" />
+          <Parameter Name="ssn_supervisor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="p_criaInter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="description" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="startDate" Type="datetime" Mode="In" />
+          <Parameter Name="endDate" Type="datetime" Mode="In" />
+          <Parameter Name="frequency" Type="int" Mode="In" />
+          <Parameter Name="asset_id" Type="int" Mode="In" />
+          <Parameter Name="skillDescription" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="removeEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ssn" Type="int" Mode="In" />
+        </Function>
+        <Function Name="update_interventation_state" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="state" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="update_team_members" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="team_code" Type="int" Mode="In" />
+          <Parameter Name="toDelete" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="updateEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ssn" Type="int" Mode="In" />
+          <Parameter Name="f_name" Type="varchar" Mode="In" />
+          <Parameter Name="l_name" Type="varchar" Mode="In" />
+          <Parameter Name="birth_date" Type="datetime" Mode="In" />
+          <Parameter Name="address" Type="varchar" Mode="In" />
+          <Parameter Name="postal_code" Type="varchar" Mode="In" />
+          <Parameter Name="city" Type="varchar" Mode="In" />
+          <Parameter Name="job" Type="varchar" Mode="In" />
+          <Parameter Name="phone_number" Type="int" Mode="In" />
+          <Parameter Name="mail" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="updateStateIntervention" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="intervention_code" Type="int" Mode="In" />
+          <Parameter Name="state" Type="varchar" Mode="In" />
+          <Parameter Name="endDate" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="L51DG5ModelStoreContainer">
+          <EntitySet Name="ASSET" EntityType="Self.ASSET" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLOYEE_SKILL" EntityType="Self.EMPLOYEE_SKILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INTERVENTION" EntityType="Self.INTERVENTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MAINTENANCE_TEAM" EntityType="Self.MAINTENANCE_TEAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NON_PERIODIC" EntityType="Self.NON_PERIODIC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERIODIC" EntityType="Self.PERIODIC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTER" EntityType="Self.REGISTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SCHEDULING" EntityType="Self.SCHEDULING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKILL" EntityType="Self.SKILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEAM_MEMBER" EntityType="Self.TEAM_MEMBER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TYPE" EntityType="Self.TYPE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ASSET__asset_ref__4C8B54C9" Association="Self.FK__ASSET__asset_ref__4C8B54C9">
+            <End Role="ASSET" EntitySet="ASSET" />
+            <End Role="ASSET1" EntitySet="ASSET" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ASSET__manager__4D7F7902" Association="Self.FK__ASSET__manager__4D7F7902">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+            <End Role="ASSET" EntitySet="ASSET" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ASSET__type__4E739D3B" Association="Self.FK__ASSET__type__4E739D3B">
+            <End Role="TYPE" EntitySet="TYPE" />
+            <End Role="ASSET" EntitySet="ASSET" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEE___emplo__6CF8245B" Association="Self.FK__EMPLOYEE___emplo__6CF8245B">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+            <End Role="EMPLOYEE_SKILL" EntitySet="EMPLOYEE_SKILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EMPLOYEE___skill__6DEC4894" Association="Self.FK__EMPLOYEE___skill__6DEC4894">
+            <End Role="SKILL" EntitySet="SKILL" />
+            <End Role="EMPLOYEE_SKILL" EntitySet="EMPLOYEE_SKILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INTERVENT__asset__5DB5E0CB" Association="Self.FK__INTERVENT__asset__5DB5E0CB">
+            <End Role="ASSET" EntitySet="ASSET" />
+            <End Role="INTERVENTION" EntitySet="INTERVENTION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MAINTENAN__super__55209ACA" Association="Self.FK__MAINTENAN__super__55209ACA">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NON_PERIODIC__id__6462DE5A" Association="Self.FK__NON_PERIODIC__id__6462DE5A">
+            <End Role="INTERVENTION" EntitySet="INTERVENTION" />
+            <End Role="NON_PERIODIC" EntitySet="NON_PERIODIC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PERIODIC__id__618671AF" Association="Self.FK__PERIODIC__id__618671AF">
+            <End Role="INTERVENTION" EntitySet="INTERVENTION" />
+            <End Role="PERIODIC" EntitySet="PERIODIC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__asset___515009E6" Association="Self.FK__REGISTER__asset___515009E6">
+            <End Role="ASSET" EntitySet="ASSET" />
+            <End Role="REGISTER" EntitySet="REGISTER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SCHEDULIN__inter__68336F3E" Association="Self.FK__SCHEDULIN__inter__68336F3E">
+            <End Role="INTERVENTION" EntitySet="INTERVENTION" />
+            <End Role="SCHEDULING" EntitySet="SCHEDULING" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SCHEDULIN__team___673F4B05" Association="Self.FK__SCHEDULIN__team___673F4B05">
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+            <End Role="SCHEDULING" EntitySet="SCHEDULING" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEAM_MEMB__team___58F12BAE" Association="Self.FK__TEAM_MEMB__team___58F12BAE">
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+            <End Role="TEAM_MEMBER" EntitySet="TEAM_MEMBER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEAM_MEMBER__id__57FD0775" Association="Self.FK__TEAM_MEMBER__id__57FD0775">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
+            <End Role="TEAM_MEMBER" EntitySet="TEAM_MEMBER" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="L51DG5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="interByYear_Result">
+          <Property Name="intervention_code" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="start_date" Type="DateTime" />
+          <Property Name="end_date" Type="DateTime" />
+          <Property Name="asset_id" Type="Int32" />
+        </ComplexType>
+        <EntityContainer Name="L51DG5Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="interByYear" IsComposable="true" ReturnType="Collection(L51DG5Model.interByYear_Result)">
+          <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="insertEmployee">
+            <Parameter Name="ssn" Mode="In" Type="Int32" />
+            <Parameter Name="f_name" Mode="In" Type="String" />
+            <Parameter Name="l_name" Mode="In" Type="String" />
+            <Parameter Name="birth_date" Mode="In" Type="DateTime" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="postal_code" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="job" Mode="In" Type="String" />
+            <Parameter Name="phone_number" Mode="In" Type="Int32" />
+            <Parameter Name="mail" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="p_create_team">
+            <Parameter Name="location" Mode="In" Type="String" />
+            <Parameter Name="ssn_supervisor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="p_criaInter">
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="startDate" Mode="In" Type="DateTime" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+            <Parameter Name="frequency" Mode="In" Type="Int32" />
+            <Parameter Name="asset_id" Mode="In" Type="Int32" />
+            <Parameter Name="skillDescription" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="removeEmployee">
+          <Parameter Name="ssn" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="update_interventation_state">
+          <Parameter Name="state" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="update_team_members">
+            <Parameter Name="team_code" Mode="In" Type="Int32" />
+            <Parameter Name="toDelete" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="updateEmployee">
+            <Parameter Name="ssn" Mode="In" Type="Int32" />
+            <Parameter Name="f_name" Mode="In" Type="String" />
+            <Parameter Name="l_name" Mode="In" Type="String" />
+            <Parameter Name="birth_date" Mode="In" Type="DateTime" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="postal_code" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="job" Mode="In" Type="String" />
+            <Parameter Name="phone_number" Mode="In" Type="Int32" />
+            <Parameter Name="mail" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="updateStateIntervention">
+            <Parameter Name="intervention_code" Mode="In" Type="Int32" />
+            <Parameter Name="state" Mode="In" Type="String" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="ASSETs" EntityType="L51DG5Model.ASSET" />
+          <EntitySet Name="EMPLOYEEs" EntityType="L51DG5Model.EMPLOYEE" />
+          <EntitySet Name="INTERVENTIONs" EntityType="L51DG5Model.INTERVENTION" />
+          <EntitySet Name="MAINTENANCE_TEAM" EntityType="L51DG5Model.MAINTENANCE_TEAM" />
+          <EntitySet Name="NON_PERIODIC" EntityType="L51DG5Model.NON_PERIODIC" />
+          <EntitySet Name="PERIODICs" EntityType="L51DG5Model.PERIODIC" />
+          <EntitySet Name="REGISTERs" EntityType="L51DG5Model.REGISTER" />
+          <EntitySet Name="SCHEDULINGs" EntityType="L51DG5Model.SCHEDULING" />
+          <EntitySet Name="SKILLs" EntityType="L51DG5Model.SKILL" />
+          <EntitySet Name="TYPEs" EntityType="L51DG5Model.TYPE" />
+          <AssociationSet Name="FK__ASSET__asset_ref__4C8B54C9" Association="L51DG5Model.FK__ASSET__asset_ref__4C8B54C9">
+            <End Role="ASSET" EntitySet="ASSETs" />
+            <End Role="ASSET1" EntitySet="ASSETs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ASSET__manager__4D7F7902" Association="L51DG5Model.FK__ASSET__manager__4D7F7902">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+            <End Role="ASSET" EntitySet="ASSETs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ASSET__type__4E739D3B" Association="L51DG5Model.FK__ASSET__type__4E739D3B">
+            <End Role="TYPE" EntitySet="TYPEs" />
+            <End Role="ASSET" EntitySet="ASSETs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__INTERVENT__asset__5DB5E0CB" Association="L51DG5Model.FK__INTERVENT__asset__5DB5E0CB">
+            <End Role="ASSET" EntitySet="ASSETs" />
+            <End Role="INTERVENTION" EntitySet="INTERVENTIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGISTER__asset___515009E6" Association="L51DG5Model.FK__REGISTER__asset___515009E6">
+            <End Role="ASSET" EntitySet="ASSETs" />
+            <End Role="REGISTER" EntitySet="REGISTERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MAINTENAN__super__55209ACA" Association="L51DG5Model.FK__MAINTENAN__super__55209ACA">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NON_PERIODIC__id__6462DE5A" Association="L51DG5Model.FK__NON_PERIODIC__id__6462DE5A">
+            <End Role="INTERVENTION" EntitySet="INTERVENTIONs" />
+            <End Role="NON_PERIODIC" EntitySet="NON_PERIODIC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PERIODIC__id__618671AF" Association="L51DG5Model.FK__PERIODIC__id__618671AF">
+            <End Role="INTERVENTION" EntitySet="INTERVENTIONs" />
+            <End Role="PERIODIC" EntitySet="PERIODICs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SCHEDULIN__inter__68336F3E" Association="L51DG5Model.FK__SCHEDULIN__inter__68336F3E">
+            <End Role="INTERVENTION" EntitySet="INTERVENTIONs" />
+            <End Role="SCHEDULING" EntitySet="SCHEDULINGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SCHEDULIN__team___673F4B05" Association="L51DG5Model.FK__SCHEDULIN__team___673F4B05">
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+            <End Role="SCHEDULING" EntitySet="SCHEDULINGs" />
+          </AssociationSet>
+          <AssociationSet Name="EMPLOYEE_SKILL" Association="L51DG5Model.EMPLOYEE_SKILL">
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+            <End Role="SKILL" EntitySet="SKILLs" />
+          </AssociationSet>
+          <AssociationSet Name="TEAM_MEMBER" Association="L51DG5Model.TEAM_MEMBER">
+            <End Role="MAINTENANCE_TEAM" EntitySet="MAINTENANCE_TEAM" />
+            <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+          </AssociationSet>
+          <FunctionImport Name="get_code_from_team" IsComposable="true" ReturnType="Collection(L51DG5Model.get_code_from_team_Result)">
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ASSET">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="asset_name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="acquisition_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="state" Type="Boolean" Nullable="false" />
+          <Property Name="brand" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="asset_reference" Type="Int32" />
+          <Property Name="manager" Type="Int32" />
+          <Property Name="type" Type="Int32" />
+          <NavigationProperty Name="ASSET1" Relationship="L51DG5Model.FK__ASSET__asset_ref__4C8B54C9" FromRole="ASSET" ToRole="ASSET1" />
+          <NavigationProperty Name="ASSET2" Relationship="L51DG5Model.FK__ASSET__asset_ref__4C8B54C9" FromRole="ASSET1" ToRole="ASSET" />
+          <NavigationProperty Name="EMPLOYEE" Relationship="L51DG5Model.FK__ASSET__manager__4D7F7902" FromRole="ASSET" ToRole="EMPLOYEE" />
+          <NavigationProperty Name="TYPE1" Relationship="L51DG5Model.FK__ASSET__type__4E739D3B" FromRole="ASSET" ToRole="TYPE" />
+          <NavigationProperty Name="INTERVENTIONs" Relationship="L51DG5Model.FK__INTERVENT__asset__5DB5E0CB" FromRole="ASSET" ToRole="INTERVENTION" />
+          <NavigationProperty Name="REGISTERs" Relationship="L51DG5Model.FK__REGISTER__asset___515009E6" FromRole="ASSET" ToRole="REGISTER" />
+        </EntityType>
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ssn" />
+          </Key>
+          <Property Name="ssn" Type="Int32" Nullable="false" ConcurrencyMode="Fixed" />
+          <Property Name="f_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="l_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="birth_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="postal_code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="job" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_number" Type="Int32" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ASSETs" Relationship="L51DG5Model.FK__ASSET__manager__4D7F7902" FromRole="EMPLOYEE" ToRole="ASSET" />
+          <NavigationProperty Name="MAINTENANCE_TEAM" Relationship="L51DG5Model.FK__MAINTENAN__super__55209ACA" FromRole="EMPLOYEE" ToRole="MAINTENANCE_TEAM" />
+          <NavigationProperty Name="SKILLs" Relationship="L51DG5Model.EMPLOYEE_SKILL" FromRole="EMPLOYEE" ToRole="SKILL" />
+          <NavigationProperty Name="MAINTENANCE_TEAM1" Relationship="L51DG5Model.TEAM_MEMBER" FromRole="EMPLOYEE" ToRole="MAINTENANCE_TEAM" />
+        </EntityType>
+        <EntityType Name="INTERVENTION">
+          <Key>
+            <PropertyRef Name="intervention_code" />
+          </Key>
+          <Property Name="intervention_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="asset_id" Type="Int32" />
+          <NavigationProperty Name="ASSET" Relationship="L51DG5Model.FK__INTERVENT__asset__5DB5E0CB" FromRole="INTERVENTION" ToRole="ASSET" />
+          <NavigationProperty Name="NON_PERIODIC" Relationship="L51DG5Model.FK__NON_PERIODIC__id__6462DE5A" FromRole="INTERVENTION" ToRole="NON_PERIODIC" />
+          <NavigationProperty Name="PERIODIC" Relationship="L51DG5Model.FK__PERIODIC__id__618671AF" FromRole="INTERVENTION" ToRole="PERIODIC" />
+          <NavigationProperty Name="SCHEDULINGs" Relationship="L51DG5Model.FK__SCHEDULIN__inter__68336F3E" FromRole="INTERVENTION" ToRole="SCHEDULING" />
+        </EntityType>
+        <EntityType Name="MAINTENANCE_TEAM">
+          <Key>
+            <PropertyRef Name="team_code" />
+          </Key>
+          <Property Name="team_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="n_elements" Type="Int32" Nullable="false" />
+          <Property Name="supervisor" Type="Int32" />
+          <NavigationProperty Name="EMPLOYEE" Relationship="L51DG5Model.FK__MAINTENAN__super__55209ACA" FromRole="MAINTENANCE_TEAM" ToRole="EMPLOYEE" />
+          <NavigationProperty Name="SCHEDULINGs" Relationship="L51DG5Model.FK__SCHEDULIN__team___673F4B05" FromRole="MAINTENANCE_TEAM" ToRole="SCHEDULING" />
+          <NavigationProperty Name="EMPLOYEEs" Relationship="L51DG5Model.TEAM_MEMBER" FromRole="MAINTENANCE_TEAM" ToRole="EMPLOYEE" />
+        </EntityType>
+        <EntityType Name="NON_PERIODIC">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="INTERVENTION" Relationship="L51DG5Model.FK__NON_PERIODIC__id__6462DE5A" FromRole="NON_PERIODIC" ToRole="INTERVENTION" />
+        </EntityType>
+        <EntityType Name="PERIODIC">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="frequency" Type="Int32" />
+          <NavigationProperty Name="INTERVENTION" Relationship="L51DG5Model.FK__PERIODIC__id__618671AF" FromRole="PERIODIC" ToRole="INTERVENTION" />
+        </EntityType>
+        <EntityType Name="REGISTER">
+          <Key>
+            <PropertyRef Name="asset_id" />
+            <PropertyRef Name="alteration_date" />
+          </Key>
+          <Property Name="asset_id" Type="Int32" Nullable="false" />
+          <Property Name="alteration_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="price" Type="Decimal" Precision="6" Scale="2" />
+          <NavigationProperty Name="ASSET" Relationship="L51DG5Model.FK__REGISTER__asset___515009E6" FromRole="REGISTER" ToRole="ASSET" />
+        </EntityType>
+        <EntityType Name="SCHEDULING">
+          <Key>
+            <PropertyRef Name="team_code" />
+            <PropertyRef Name="intervention_code" />
+          </Key>
+          <Property Name="team_code" Type="Int32" Nullable="false" />
+          <Property Name="intervention_code" Type="Int32" Nullable="false" />
+          <Property Name="scheduling_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="INTERVENTION" Relationship="L51DG5Model.FK__SCHEDULIN__inter__68336F3E" FromRole="SCHEDULING" ToRole="INTERVENTION" />
+          <NavigationProperty Name="MAINTENANCE_TEAM" Relationship="L51DG5Model.FK__SCHEDULIN__team___673F4B05" FromRole="SCHEDULING" ToRole="MAINTENANCE_TEAM" />
+        </EntityType>
+        <EntityType Name="SKILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="EMPLOYEEs" Relationship="L51DG5Model.EMPLOYEE_SKILL" FromRole="SKILL" ToRole="EMPLOYEE" />
+        </EntityType>
+        <EntityType Name="TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ASSETs" Relationship="L51DG5Model.FK__ASSET__type__4E739D3B" FromRole="TYPE" ToRole="ASSET" />
+        </EntityType>
+        <Association Name="FK__ASSET__asset_ref__4C8B54C9">
+          <End Type="L51DG5Model.ASSET" Role="ASSET" Multiplicity="0..1" />
+          <End Type="L51DG5Model.ASSET" Role="ASSET1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ASSET1">
+              <PropertyRef Name="asset_reference" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ASSET__manager__4D7F7902">
+          <End Type="L51DG5Model.EMPLOYEE" Role="EMPLOYEE" Multiplicity="0..1" />
+          <End Type="L51DG5Model.ASSET" Role="ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="ASSET">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ASSET__type__4E739D3B">
+          <End Type="L51DG5Model.TYPE" Role="TYPE" Multiplicity="0..1" />
+          <End Type="L51DG5Model.ASSET" Role="ASSET" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ASSET">
+              <PropertyRef Name="type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__INTERVENT__asset__5DB5E0CB">
+          <End Type="L51DG5Model.ASSET" Role="ASSET" Multiplicity="0..1" />
+          <End Type="L51DG5Model.INTERVENTION" Role="INTERVENTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="INTERVENTION">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGISTER__asset___515009E6">
+          <End Type="L51DG5Model.ASSET" Role="ASSET" Multiplicity="1" />
+          <End Type="L51DG5Model.REGISTER" Role="REGISTER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ASSET">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="REGISTER">
+              <PropertyRef Name="asset_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MAINTENAN__super__55209ACA">
+          <End Type="L51DG5Model.EMPLOYEE" Role="EMPLOYEE" Multiplicity="0..1" />
+          <End Type="L51DG5Model.MAINTENANCE_TEAM" Role="MAINTENANCE_TEAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPLOYEE">
+              <PropertyRef Name="ssn" />
+            </Principal>
+            <Dependent Role="MAINTENANCE_TEAM">
+              <PropertyRef Name="supervisor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NON_PERIODIC__id__6462DE5A">
+          <End Type="L51DG5Model.INTERVENTION" Role="INTERVENTION" Multiplicity="1" />
+          <End Type="L51DG5Model.NON_PERIODIC" Role="NON_PERIODIC" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="NON_PERIODIC">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PERIODIC__id__618671AF">
+          <End Type="L51DG5Model.INTERVENTION" Role="INTERVENTION" Multiplicity="1" />
+          <End Type="L51DG5Model.PERIODIC" Role="PERIODIC" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="PERIODIC">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SCHEDULIN__inter__68336F3E">
+          <End Type="L51DG5Model.INTERVENTION" Role="INTERVENTION" Multiplicity="1" />
+          <End Type="L51DG5Model.SCHEDULING" Role="SCHEDULING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INTERVENTION">
+              <PropertyRef Name="intervention_code" />
+            </Principal>
+            <Dependent Role="SCHEDULING">
+              <PropertyRef Name="intervention_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SCHEDULIN__team___673F4B05">
+          <End Type="L51DG5Model.MAINTENANCE_TEAM" Role="MAINTENANCE_TEAM" Multiplicity="1" />
+          <End Type="L51DG5Model.SCHEDULING" Role="SCHEDULING" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINTENANCE_TEAM">
+              <PropertyRef Name="team_code" />
+            </Principal>
+            <Dependent Role="SCHEDULING">
+              <PropertyRef Name="team_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EMPLOYEE_SKILL">
+          <End Type="L51DG5Model.EMPLOYEE" Role="EMPLOYEE" Multiplicity="*" />
+          <End Type="L51DG5Model.SKILL" Role="SKILL" Multiplicity="*" />
+        </Association>
+        <Association Name="TEAM_MEMBER">
+          <End Type="L51DG5Model.MAINTENANCE_TEAM" Role="MAINTENANCE_TEAM" Multiplicity="*" />
+          <End Type="L51DG5Model.EMPLOYEE" Role="EMPLOYEE" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="get_code_from_team_Result">
+          <Property Type="Int32" Name="team_code" Nullable="true" />
+          <Property Type="String" Name="location" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="n_elements" Nullable="true" />
+          <Property Type="Int32" Name="supervisor" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="L51DG5ModelStoreContainer" CdmEntityContainer="L51DG5Entities">
+          <FunctionImportMapping FunctionName="L51DG5Model.Store.interByYear" FunctionImportName="interByYear">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="L51DG5Model.interByYear_Result">
+                <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="insertEmployee" FunctionName="L51DG5Model.Store.insertEmployee" />
+          <FunctionImportMapping FunctionImportName="p_create_team" FunctionName="L51DG5Model.Store.p_create_team" />
+          <FunctionImportMapping FunctionImportName="p_criaInter" FunctionName="L51DG5Model.Store.p_criaInter" />
+          <FunctionImportMapping FunctionImportName="removeEmployee" FunctionName="L51DG5Model.Store.removeEmployee" />
+          <FunctionImportMapping FunctionImportName="update_interventation_state" FunctionName="L51DG5Model.Store.update_interventation_state" />
+          <FunctionImportMapping FunctionImportName="update_team_members" FunctionName="L51DG5Model.Store.update_team_members" />
+          <FunctionImportMapping FunctionImportName="updateEmployee" FunctionName="L51DG5Model.Store.updateEmployee" />
+          <FunctionImportMapping FunctionImportName="updateStateIntervention" FunctionName="L51DG5Model.Store.updateStateIntervention" />
+          <EntitySetMapping Name="ASSETs">
+            <EntityTypeMapping TypeName="L51DG5Model.ASSET">
+              <MappingFragment StoreEntitySet="ASSET">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="asset_reference" ColumnName="asset_reference" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="acquisition_date" ColumnName="acquisition_date" />
+                <ScalarProperty Name="asset_name" ColumnName="asset_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLOYEEs">
+            <EntityTypeMapping TypeName="L51DG5Model.EMPLOYEE">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="job" ColumnName="job" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="postal_code" ColumnName="postal_code" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+                <ScalarProperty Name="l_name" ColumnName="l_name" />
+                <ScalarProperty Name="f_name" ColumnName="f_name" />
+                <ScalarProperty Name="ssn" ColumnName="ssn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERVENTIONs">
+            <EntityTypeMapping TypeName="L51DG5Model.INTERVENTION">
+              <MappingFragment StoreEntitySet="INTERVENTION">
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MAINTENANCE_TEAM">
+            <EntityTypeMapping TypeName="L51DG5Model.MAINTENANCE_TEAM">
+              <MappingFragment StoreEntitySet="MAINTENANCE_TEAM">
+                <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+                <ScalarProperty Name="n_elements" ColumnName="n_elements" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="team_code" ColumnName="team_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NON_PERIODIC">
+            <EntityTypeMapping TypeName="L51DG5Model.NON_PERIODIC">
+              <MappingFragment StoreEntitySet="NON_PERIODIC">
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERIODICs">
+            <EntityTypeMapping TypeName="L51DG5Model.PERIODIC">
+              <MappingFragment StoreEntitySet="PERIODIC">
+                <ScalarProperty Name="frequency" ColumnName="frequency" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTERs">
+            <EntityTypeMapping TypeName="L51DG5Model.REGISTER">
+              <MappingFragment StoreEntitySet="REGISTER">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="alteration_date" ColumnName="alteration_date" />
+                <ScalarProperty Name="asset_id" ColumnName="asset_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SCHEDULINGs">
+            <EntityTypeMapping TypeName="L51DG5Model.SCHEDULING">
+              <MappingFragment StoreEntitySet="SCHEDULING">
+                <ScalarProperty Name="scheduling_date" ColumnName="scheduling_date" />
+                <ScalarProperty Name="intervention_code" ColumnName="intervention_code" />
+                <ScalarProperty Name="team_code" ColumnName="team_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SKILLs">
+            <EntityTypeMapping TypeName="L51DG5Model.SKILL">
+              <MappingFragment StoreEntitySet="SKILL">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TYPEs">
+            <EntityTypeMapping TypeName="L51DG5Model.TYPE">
+              <MappingFragment StoreEntitySet="TYPE">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="EMPLOYEE_SKILL" TypeName="L51DG5Model.EMPLOYEE_SKILL" StoreEntitySet="EMPLOYEE_SKILL">
+            <EndProperty Name="SKILL">
+              <ScalarProperty Name="id" ColumnName="skill_code" />
+            </EndProperty>
+            <EndProperty Name="EMPLOYEE">
+              <ScalarProperty Name="ssn" ColumnName="employee_code" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TEAM_MEMBER" TypeName="L51DG5Model.TEAM_MEMBER" StoreEntitySet="TEAM_MEMBER">
+            <EndProperty Name="EMPLOYEE">
+              <ScalarProperty Name="ssn" ColumnName="id" />
+            </EndProperty>
+            <EndProperty Name="MAINTENANCE_TEAM">
+              <ScalarProperty Name="team_code" ColumnName="team_code" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="get_code_from_team" FunctionName="L51DG5Model.Store.get_code_from_team">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="L51DG5Model.get_code_from_team_Result">
+                <ScalarProperty Name="team_code" ColumnName="team_code" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="n_elements" ColumnName="n_elements" />
+                <ScalarProperty Name="supervisor" ColumnName="supervisor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

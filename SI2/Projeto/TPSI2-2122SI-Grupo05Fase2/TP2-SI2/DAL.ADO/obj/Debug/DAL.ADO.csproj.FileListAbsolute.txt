@@ -1,0 +1,9 @@
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\bin\Debug\DAL.ADO.dll
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\bin\Debug\DAL.ADO.pdb
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\bin\Debug\DALTypes.dll
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\bin\Debug\DALTypes.pdb
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\obj\Debug\DAL.ADO.csproj.AssemblyReference.cache
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\obj\Debug\DAL.ADO.csproj.CoreCompileInputs.cache
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\obj\Debug\DAL.ADO.csproj.CopyComplete
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\obj\Debug\DAL.ADO.dll
+C:\Users\catia\Downloads\SI2\projeto\other\si2\TP2-SI2\DAL.ADO\obj\Debug\DAL.ADO.pdb

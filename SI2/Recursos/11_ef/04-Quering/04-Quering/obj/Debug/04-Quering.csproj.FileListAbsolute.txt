@@ -1,0 +1,36 @@
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe.config
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe.config
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2016-2017-2\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe.config
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csproj.CopyComplete
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2018-2019-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe.config
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\04 - Quering.pdb
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.dll
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\bin\Debug\EntityFramework.xml
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csprojAssemblyReference.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csproj.CoreCompileInputs.cache
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04-Quering.csproj.CopyComplete
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.exe
+\\Vboxsvr\si2\2019-2020-1\exemplos\ef\04-Quering\04-Quering\obj\Debug\04 - Quering.pdb

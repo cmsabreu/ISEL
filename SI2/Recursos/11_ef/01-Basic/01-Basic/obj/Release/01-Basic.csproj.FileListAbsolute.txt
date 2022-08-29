@@ -1,0 +1,2 @@
+\\Vboxsvr\2014-2015-1\Exemplos\ef\01-Basic\01-Basic\bin\Release\01-Basic.exe.config
+\\Vboxsvr\2015-2016-1\Exemplos\ef\01-Basic\01-Basic\bin\Release\01-Basic.exe.config

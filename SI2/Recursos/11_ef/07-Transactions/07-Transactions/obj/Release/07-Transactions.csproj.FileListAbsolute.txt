@@ -1,0 +1,8 @@
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\bin\Release\07 - Transactions.exe.config
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\bin\Release\07 - Transactions.exe
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\bin\Release\07 - Transactions.pdb
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\bin\Release\EntityFramework.dll
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\bin\Release\EntityFramework.xml
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\obj\Release\07-Transactions.csprojResolveAssemblyReference.cache
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\obj\Release\07 - Transactions.exe
+\\Vboxsvr\2014-2015-1\Exemplos\ef\07-Transactions\07-Transactions\obj\Release\07 - Transactions.pdb

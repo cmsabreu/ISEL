@@ -1,0 +1,11 @@
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\bin\Debug\ProviderFactory.exe.config
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\bin\Debug\ProviderFactory.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\bin\Debug\ProviderFactory.pdb
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\05 - ProviderFactory.csprojResolveAssemblyReference.cache
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.Form1.resources
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.frmProviderFactories.resources
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.frmSources.resources
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.Properties.Resources.resources
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\05 - ProviderFactory.csproj.GenerateResource.Cache
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.exe
+\\Vboxsvr\si2\2016-2017-1\exemplos\ado.net\05 - ProviderFactory\ProviderFactory\obj\Debug\ProviderFactory.pdb
